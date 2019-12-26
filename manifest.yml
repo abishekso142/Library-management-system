@@ -1,0 +1,14 @@
+---
+applications:
+- name: library-management-system
+  memory: 1G
+  timeout: 180
+  services:
+  - postgres-bulletinboard-ads
+  path: target/library-management-system-user-0.0.1-SNAPSHOT.war
+  buildpacks:
+    - https://github.com/cloudfoundry/java-buildpack.git#v4.19
+  env:
+      # Use the non-blocking /dev/urandom instead of the default to generate random numbers.
+      # This may help with slow startup times, especially when using Spring Boot.
+      JAVA_OPTS: -Djava.security.egd=file:///dev/./urandom

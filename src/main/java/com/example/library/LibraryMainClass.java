@@ -1,4 +1,4 @@
-package com.example.library.main;
+package com.example.library;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +9,8 @@ public class LibraryMainClass
 
     public static void main(String[] args)
     {
-        SpringApplication.run(LibraryMainClass.class,args);
+
+        SpringApplication.run(LibraryMainClass.class, args);
 
     }
 
